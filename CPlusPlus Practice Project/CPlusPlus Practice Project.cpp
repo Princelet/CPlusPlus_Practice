@@ -5,7 +5,19 @@
 
 int main()
 {
-    std::cout << "Hello World!\n";
+    int testInt = 69;
+    float testFloat = 0.5f;
+    bool testBool = false;
+    char testChar = 'E';
+
+    std::cout << "Hello World, my friend.\n" 
+        << "Why are you the default text?\n"
+        << "Five more syllables.\n";
+
+    std::cout << testInt << "\n"
+        << testFloat << "\n"
+        << testBool << "\n"
+        << testChar << "\n";
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
