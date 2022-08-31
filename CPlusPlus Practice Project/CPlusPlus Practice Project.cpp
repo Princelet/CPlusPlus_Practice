@@ -2,14 +2,21 @@
 //
 
 #include <iostream>
+#include <string>
 
 int main()
 {
+    // Variable type examples
     int testInt = 69;
+    unsigned testUnsigned = 100u;
     float testFloat = 0.5f;
+    double testDouble = 1.3;
     bool testBool = false;
     char testChar = 'E';
 
+    std::string testString = "EEEEEEEE";
+
+    // Example outputs to console
     std::cout << "Hello World, my friend.\n" 
         << "Why are you the default text?\n"
         << "Five more syllables.\n";
@@ -17,7 +24,11 @@ int main()
     std::cout << testInt << "\n"
         << testFloat << "\n"
         << testBool << "\n"
-        << testChar << "\n";
+        << testChar << "\n"
+        << testDouble << "\n"
+        << testUnsigned << "\n"
+        << testString << "\n";
+
 }
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
