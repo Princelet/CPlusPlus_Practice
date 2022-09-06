@@ -4,8 +4,14 @@
 #include <iostream>
 #include <string>
 
+void BasicFunction() {
+    std::cout << "Basic Function Ran!\n\n";
+}
+
 int main()
 {
+    BasicFunction();
+
     /* 
     // Variable type examples
     int testInt = 69;
@@ -106,6 +112,7 @@ int main()
 
 
 
+    /*
 
     // Selection
     // If statements are essentially the same as C#
@@ -119,8 +126,67 @@ int main()
         std::cout << "Decision was false!\n";
     }
 
+    // Switch/Case statement
+    int errorCode = 2;
+
+    switch (errorCode)
+    {
+    case 0:
+     {
+        std::cout << "Error 0.";
+        break;
+    }
+
+    case 1:
+    {
+        std::cout << "Error 1.";
+        break;
+    }
+
+    case 2:
+    {
+        std::cout << "Error 2.";
+        break;
+    }
+
+    default: 
+    {
+        std::cout << "An unknown error occurred.";
+        break;
+    }
+    }
 
     // Advanced if statement: Ternary
     // Written in-line with other code, such as an assignment statement
     int ternResult = decision ? 1 : 2;
+
+    */
+
+
+
+    /*
+
+    // Selection
+    // While loop
+    bool whilst = true;
+    while (whilst == true)
+    {
+        whilst = false;
+    }
+
+    // Do While loop
+    int doI = 0;
+    do {
+        ++doI;
+        std::cout << "do while ran " << doI << " times!\n";
+    } while (doI<2);
+
+    // For loop
+    for (int i = 0; i < 5; ++i)
+    {
+        std::cout << "for loop ran " << i + 1 << " times!\n";
+    }
+
+    */
+
 }
