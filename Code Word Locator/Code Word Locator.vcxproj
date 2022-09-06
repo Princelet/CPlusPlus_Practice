@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{fe89093b-be5a-4c96-bfd5-9aec3f568e49}</ProjectGuid>
-    <RootNamespace>CPlusPlusPracticeProject</RootNamespace>
+    <ProjectGuid>{f2d3fb5b-34cf-4e68-96f3-79e7e6b22423}</ProjectGuid>
+    <RootNamespace>CodeWordLocator</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,8 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CPlusPlus Practice Project.cpp" />
-    <ClCompile Include="Source.cpp" />
+    <ClCompile Include="Code Word Locator.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
