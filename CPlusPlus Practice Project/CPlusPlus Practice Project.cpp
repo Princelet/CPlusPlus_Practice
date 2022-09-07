@@ -8,9 +8,26 @@ void BasicFunction() {
     std::cout << "Basic Function Ran!\n\n";
 }
 
+void ParameterFunc(int paramInt) {
+    ++paramInt;
+    std::cout << "Parameter Function ran - paramInt = " << paramInt << "!\n";
+}
+
+int ReturnFunc() {
+    return 42;
+}
+
 int main()
 {
     BasicFunction();
+
+    // Basically says paramInt = testInt
+    int testInt = 4;
+    ParameterFunc(testInt);
+
+    int returnValue = ReturnFunc();
+
+    std::cout << "Return Value = " << returnValue << "!\n";
 
     /* 
     // Variable type examples
@@ -188,5 +205,10 @@ int main()
     }
 
     */
-
+    
+    // Static Array
+    int intArray[] = { 0, 1, 2 };
+    const int intArraySize = 3; // Can only use a constant for array sizes
+    int intArrayB[intArraySize]; // Will be filled with Garbage Data
+    
 }
