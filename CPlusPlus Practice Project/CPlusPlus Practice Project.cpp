@@ -3,6 +3,9 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
+#include <stdlib.h> // to use rand()
+#include <time.h> // gets current absolute time
 
 void BasicFunction() {
     std::cout << "Basic Function Ran!\n\n";
@@ -19,6 +22,10 @@ int ReturnFunc() {
 
 int main()
 {
+    /*
+    
+    
+
     BasicFunction();
 
     // Basically says paramInt = testInt
@@ -29,7 +36,6 @@ int main()
 
     std::cout << "Return Value = " << returnValue << "!\n";
 
-    /* 
     // Variable type examples
     int testInt = 69;
     unsigned testUnsigned = 100u;
@@ -204,11 +210,104 @@ int main()
         std::cout << "for loop ran " << i + 1 << " times!\n";
     }
 
-    */
-    
+
     // Static Array
     int intArray[] = { 0, 1, 2 };
     const int intArraySize = 3; // Can only use a constant for array sizes
     int intArrayB[intArraySize]; // Will be filled with Garbage Data
+
+
+    */
     
+
+
+    /*
+
+    // Declare a Vector
+    std::vector<int> intVector;
+
+    // Add items to vector using the "push_back" function.
+    // This adds, no surprise, to the back of the vector. (the end)
+    // Vector grows one size for every push_back, adding new value to the end.
+
+    intVector.push_back(1); // Vector = { 1 }
+    intVector.push_back(2); // Vector = { 1, 2 }
+    intVector.push_back(74); // Vector = { 1, 2, 74 }
+
+    // You can get the current size using the [vectorname].size() function.
+    std::cout << "Vector is " << intVector.size() << " items long.\n";
+
+
+    // You can access vector items like an array.
+    std::cout << "Vector index 2 is " << intVector[2] << ".\n";
+
+    // You can also change values at will, but an item MUST already exist in that index.
+    intVector[2] = 45; // Vector = { 1, 2, 45 }
+    std::cout << "Vector index 2 is " << intVector[2] << ".\n";
+
+    // You can remove items from a vector.
+    // Adding more items for an example.
+    intVector.push_back(22);
+    intVector.push_back(754);
+    // Vector is now currently { 1, 2, 45, 22, 754 }
+    
+
+    // Items can be removed using the erase() function.
+    // Erase uses iterators: markers for particular points in the vector.
+    // Erase's procedure is non-inclusive of the end point.
+    std::cout << "\nBefore erase!\n";
+    std::cout << "Vector index 0 is currently " << intVector[0] << ".\n";
+    std::cout << "Vector is " << intVector.size() << " items long.\n";
+    
+    // Let's erase the first two elements of the vector.
+    // Parameter 1 - starting point = begin()
+    // Parameter 2 - end point = begin() + number of elements
+    intVector.erase(intVector.begin(), intVector.begin() + 2);
+
+    std::cout << "\nAfter erase!\n";
+    std::cout << "\nVector index 0 is now " << intVector[0] << ".\n";
+    std::cout << "Vector is " << intVector.size() << " items long.\n\n";
+
+
+    // Print all vector elements
+    for (int i = 0; i < intVector.size(); ++i)
+    {
+        std::cout << "Vector index " << i << " is " << intVector[i] << ".\n";
+        // Print out the value of the vector at current point
+    }
+
+    */
+
+    /*
+    // Generates a random number from 0 to RAND_MAX (very very large)
+    // Rand uses a seed so it will be the same by default every time.
+    int totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << "\n";
+    totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << "\n";
+    totallyRandom = std::rand();
+    std::cout << "Random number is: " << totallyRandom << "\n";
+    */
+
+
+
+
+    // Let's seed it!
+    // A seed is the starting point for the random calculations. 
+    // Every time you use the same seed, we get the same results.
+    // Instead of manually seeding every time, we use the actual time to get it random and different every time.
+    std::srand(time(NULL));
+
+    // Most of the time, we don't want huge random numbers!
+    // Let's say we only want between 0 and 100.
+    int range = 100;
+
+    // Modulo (%) allows us to use a division remainder to get the right range.
+    int seededRandom = std::rand() % range;
+    std::cout << "Seeded random number 1 is: " << seededRandom << "\n";
+    seededRandom = std::rand() % range;
+    std::cout << "Seeded random number 2 is: " << seededRandom << "\n";
+    seededRandom = std::rand() % range;
+    std::cout << "Seeded random number 3 is: " << seededRandom << "\n";
+
 }
