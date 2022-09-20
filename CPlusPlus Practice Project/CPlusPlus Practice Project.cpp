@@ -290,7 +290,10 @@ int main()
     */
 
 
+    
 
+
+    /*
 
     // Let's seed it!
     // A seed is the starting point for the random calculations. 
@@ -309,5 +312,10 @@ int main()
     std::cout << "Seeded random number 2 is: " << seededRandom << "\n";
     seededRandom = std::rand() % range;
     std::cout << "Seeded random number 3 is: " << seededRandom << "\n";
+    */
+
+
+
+    
 
 }
